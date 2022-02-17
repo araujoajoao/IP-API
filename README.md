@@ -5,17 +5,16 @@ Documentation
 ```
 https://ipapi.co/api/?python#location-of-clients-ip
 ```
+
 Challenge
 ```
 Construir uma API que responde em qual localização se encontra um determinado IP.
 Inserido IP, teremos uma localização detalhada como retorno.
-
+```
 
 Installation
 ```
 brew install python3
-```
-```
 pip install ipapi
 ```
 
