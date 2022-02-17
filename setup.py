@@ -6,4 +6,5 @@ print(ipapi.location(ip))
 
 import sys
 
-sys.stdout = open('IPAPI.log', 'a')
+sys.stdout = open('ipapi.log', 'a')
+sys.stdout.write(print)
