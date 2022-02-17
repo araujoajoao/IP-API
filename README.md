@@ -19,6 +19,6 @@ Python 3.4+
 Execute
 ```
 python3 setup.py install
-=======
+
 ```
 
