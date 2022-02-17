@@ -1,5 +1,5 @@
 import ipapi
 
-ip = input("Informe seu IP: ")
+ip = input("Informe o IP que deseja informações: ")
 
 print(ipapi.location(ip))
