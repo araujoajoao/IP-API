@@ -6,4 +6,4 @@ print(ipapi.location(ip))
 
 import io
 with io.open('ipapi.log', "a", encoding="utf-8") as file:
-    file.write(str(ip))
+    file.write(str(ip) + "\n")
