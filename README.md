@@ -16,6 +16,7 @@ Installation
 ```
 brew install python3
 pip install ipapi
+npm install ipapi.co 
 ```
 
 Requirements
