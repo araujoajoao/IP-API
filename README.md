@@ -27,7 +27,8 @@ Usage
 ```
 python3 setup.py install
 Inserir IP
-Consulta IP API instalado no requirements.txt
+Consulta IP API
 Localização retorna com a origem do IP informado
+Salva consulta no ipapi.log
 ```
 
