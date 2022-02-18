@@ -25,7 +25,7 @@ Python 3.4+
 
 Usage
 ```
-python3 setup.py install
+python3 app.py
 Inserir IP
 Consulta IP API
 Localização retorna com a origem do IP informado
