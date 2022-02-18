@@ -4,7 +4,6 @@ ip = input("Informe o IP que deseja informações: ")
 
 print(ipapi.location(ip))
 
-import sys
-
-sys.stdout = open('ipapi.log', 'a')
-sys.stdout.write(print)
+import io
+with io.open('ipapi.log', "a", encoding="utf-8") as file:
+    file.write(str(ip))
