@@ -8,9 +8,9 @@ https://ipapi.co/api/?python#location-of-clients-ip
 
 Challenge
 ```
-Construir uma API que responde em qual localização se encontra um determinado IP.
-Inserido IP, teremos uma localização detalhada como retorno.
-Histórico dos IPs consultados
+Construir uma API em Python que responde em qual localização se encontra um determinado IP.
+Consultar as informações do IP na IP API, retornar e salvar os valores recebidos.
+Criar um endpoint que mostre o histórico dos resultados enviados anteriormente.
 ```
 
 Installation
@@ -27,10 +27,8 @@ Python 3.4+
 Usage
 ```
 python3 ip-api.py
-Inserir IP
-Consulta IP API
-Localização retorna com a origem do IP informado
-Salva consulta no ipapi.log
+Access Key: 4b441b7d00ae432f6864810c14136db6
+8.8.8.8/history
 ```
 References
 ```
