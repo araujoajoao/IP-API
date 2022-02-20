@@ -33,6 +33,6 @@ Salva consulta no ipapi.log
 ```
 References
 ```
-https://ipstack.com
-
+https://ipapi.com
+```
 
