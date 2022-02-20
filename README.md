@@ -10,6 +10,7 @@ Challenge
 ```
 Construir uma API que responde em qual localização se encontra um determinado IP.
 Inserido IP, teremos uma localização detalhada como retorno.
+Histórico dos IPs consultados
 ```
 
 Installation
@@ -25,7 +26,7 @@ Python 3.4+
 
 Usage
 ```
-python3 app.py
+python3 ip-api.py
 Inserir IP
 Consulta IP API
 Localização retorna com a origem do IP informado
