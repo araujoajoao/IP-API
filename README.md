@@ -12,6 +12,7 @@ Installation
 ```
 brew install python3
 pip install ipapi
+pip install requirements.txt
 ```
 
 Requirements
