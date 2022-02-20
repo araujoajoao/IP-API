@@ -18,7 +18,7 @@ def result(accKey, ip, continent_name, region_name, zip_code, capital): return '
 @app.route('/', methods=['GET', 'POST'])
 def ipapi():
     if request.method == 'GET':
-        return '''<h1>Please fill out with IP address</h1>
+        return '''<h1>Please fill out with Access Key and IP address</h1>
                     <form method="POST" action="/">
                     <input type="text" name="accKey">
                     <input type="text" name="ip">
