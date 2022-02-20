@@ -37,7 +37,7 @@ def ipapi():
         accKey = request.form['accKey']
         ip     = request.form['ip']
  
-        req = requests.get('http://api.ipapi.com/'+ ip + '?access_key=' + accKey)
+        req = requests.get('http://api.ipstack.com/' + ip + '?access_key=f6091e9217f35a00e1aa8658e2be4ea4')
         response = req.json()
  
         continent_name = response['continent_name']
@@ -46,7 +46,7 @@ def ipapi():
         capital        = response["location"]["capital"]        
  
         return redirect(url_for('result', accKey=accKey, ip=ip, continent_name=continent_name,
-                                 region_name=region_name, zip_code=zip_code, capital=capital))
+        region_name=region_name, zip_code=zip_code, capital=capital))
 
 if __name__ == '__main__':
     app.run()
