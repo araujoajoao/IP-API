@@ -15,7 +15,7 @@ import json
 app = Flask(__name__)
  
 app.config['DEBUG'] = True
- 
+
 @app.route('/')
 def index():
     return '<h1>IP API with Python Flask</h1>'
@@ -27,7 +27,7 @@ def result(accKey, ip, continent_name, region_name, zip_code, capital):
 @app.route('/ipapi', methods=['GET', 'POST'])
 def ipapi():
     if request.method == 'GET':
-        return '''<h1>Please fill with IP Address</h1>
+        return '''<h1>Please fill out with IP address</h1>
                     <form method="POST" action="/ipapi">
                     <input type="text" name="accKey">
                     <input type="text" name="ip">
@@ -37,7 +37,7 @@ def ipapi():
         accKey = request.form['accKey']
         ip     = request.form['ip']
  
-        req = requests.get('http://api.ipstack.com/191.178.134.22?access_key=49d163d55f0ae9da626b13157b31c0a')
+        req = requests.get('http://api.ipapi.com/'+ ip + '?access_key=' + accKey)
         response = req.json()
  
         continent_name = response['continent_name']
@@ -47,6 +47,6 @@ def ipapi():
  
         return redirect(url_for('result', accKey=accKey, ip=ip, continent_name=continent_name,
                                  region_name=region_name, zip_code=zip_code, capital=capital))
- 
+
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run()
