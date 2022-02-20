@@ -46,7 +46,7 @@ Step 5: Consultando histórico de pesquisas
 8.8.8.8/history
 ![](images/history.png)
 
-Reference"
+References
 ```
 https://ipapi.co/api/?python#location-of-clients-ip
 https://ipapi.com
