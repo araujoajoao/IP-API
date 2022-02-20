@@ -20,23 +20,32 @@ Python 3.4+
 ```
 
 Usage
-```
-Step 1: Iniciando ambiente 
-- Abrir CMD
-python3 ip-api.py
 
-Step 2: Executando API
+Step 1: Clone do repositório
+```
+$ git clone https://github.com/araujoajoao/IP-API.git
+```
+
+Step 2: Iniciando ambiente 
+- Abrir Terminal na pasta raiz da API
+![](images/cmd.png
+
+- Iniciar API
+```
+$ python3 ip-api.py
+```
+![](images/init.png
+
+Step 3: Executando API
 - Acessar browser
+Access Key: 4b441b7d00ae432f6864810c14136db6 IP: 8.8.8.8
+![](images/search.png
 
-Step 3: Realizando pesquisas
-
-Step 4: Consultando pesquisas
-Access Key: 4b441b7d00ae432f6864810c14136db6
+Step 5: Consultando histórico de pesquisas
 8.8.8.8/history
-```
+![](images/history.png
+
 References
-```
+
 https://ipapi.co/api/?python#location-of-clients-ip
 https://ipapi.com
-```
-
