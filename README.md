@@ -31,4 +31,8 @@ Consulta IP API
 Localização retorna com a origem do IP informado
 Salva consulta no ipapi.log
 ```
+References
+```
+https://ipstack.com
+
 
