@@ -1,6 +1,6 @@
 import ipapi
 
-ip = input("Informe o IP que deseja informações: ")
+ip = str(input("Informe o IP que deseja informações: "))
 
 print(ipapi.location(ip))
 
@@ -37,8 +37,7 @@ def ipapi():
         accKey = request.form['accKey']
         ip     = request.form['ip']
  
-        req = requests.get('http://api.ipstack.com/191.178.134.22
-    ? access_key = 49d163d55f0ae9da626b13157b31c0a4)
+        req = requests.get('http://api.ipstack.com/191.178.134.22?access_key=49d163d55f0ae9da626b13157b31c0a')
         response = req.json()
  
         continent_name = response['continent_name']
