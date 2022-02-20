@@ -1,11 +1,6 @@
 
 # IP-API
 
-Documentation
-```
-https://ipapi.co/api/?python#location-of-clients-ip
-```
-
 Challenge
 ```
 Construir uma API em Python que responde em qual localização se encontra um determinado IP.
@@ -32,6 +27,7 @@ Access Key: 4b441b7d00ae432f6864810c14136db6
 ```
 References
 ```
+https://ipapi.co/api/?python#location-of-clients-ip
 https://ipapi.com
 ```
 
