@@ -1,34 +1,25 @@
-import ipapi
-
-ip = str(input("Informe o IP que deseja informações: "))
-
-print(ipapi.location(ip))
-
-import io
-with io.open('ipapi.log', "a", encoding="utf-8") as file:
-    file.write(str(ipapi.location(ip)) + "\n" "\r\n")
-
-from flask import Flask, request, redirect, url_for
+from flask import Flask, request, redirect, url_for, render_template
 import requests
 import json
+import io
+import os
  
 app = Flask(__name__)
  
 app.config['DEBUG'] = True
 
-@app.route('/')
-def index():
-    return '<h1>IP API with Python Flask</h1>'
- 
+@app.route('/history')
+def content(): 
+    with io.open('ipapi.log', "r") as history: return history.read()
+    
 @app.route('/result/<string:accKey>/<string:ip>/<string:continent_name>/<string:region_name>/<string:zip_code>/<string:capital>')
-def result(accKey, ip, continent_name, region_name, zip_code, capital):
-   return '<h3>Continent Name: {};  <br> Region Name: {}; <br>  Zip Code: {}; <br> Capital Name: {}; <br> Your Access Key: {};<br>IP:{} </h3>'.format(continent_name, region_name, zip_code, capital, accKey, ip)
- 
-@app.route('/ipapi', methods=['GET', 'POST'])
+def result(accKey, ip, continent_name, region_name, zip_code, capital): return '<h3>Continent Name: {};  <br> Region Name: {}; <br>  Zip Code: {}; <br> Capital Name: {}; <br> Your Access Key: {};<br>IP:{} </h3>'.format(continent_name, region_name, zip_code, capital, accKey, ip)
+
+@app.route('/', methods=['GET', 'POST'])
 def ipapi():
     if request.method == 'GET':
         return '''<h1>Please fill out with IP address</h1>
-                    <form method="POST" action="/ipapi">
+                    <form method="POST" action="/">
                     <input type="text" name="accKey">
                     <input type="text" name="ip">
                     <input type="submit" value="Request">
@@ -37,16 +28,18 @@ def ipapi():
         accKey = request.form['accKey']
         ip     = request.form['ip']
  
-        req = requests.get('http://api.ipstack.com/' + ip + '?access_key=f6091e9217f35a00e1aa8658e2be4ea4')
+        req = requests.get('http://api.ipapi.com/' + ip + '?access_key=4b441b7d00ae432f6864810c14136db6')
         response = req.json()
  
         continent_name = response['continent_name']
         region_name    = response['region_name']
         zip_code       = response['zip']
         capital        = response["location"]["capital"]        
- 
-        return redirect(url_for('result', accKey=accKey, ip=ip, continent_name=continent_name,
-        region_name=region_name, zip_code=zip_code, capital=capital))
 
+        with io.open('ipapi.log', "a", encoding="utf-8") as file: 
+            file.write(ip + "\n" + continent_name + "\n" + region_name + "\n" + zip_code + "\n" + capital + "\n" "\r\n")
+
+        return redirect(url_for('result', accKey=accKey, ip=ip, continent_name=continent_name, region_name=region_name, zip_code=zip_code, capital=capital))
+    
 if __name__ == '__main__':
     app.run()
