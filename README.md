@@ -42,7 +42,6 @@ Step 3: Executando API e realizando consulta de IP
 ![](images/search.png)
 
 Step 5: Consultando histórico de pesquisas <br />
-8.8.8.8/history
 ![](images/history.png)
 
 References
