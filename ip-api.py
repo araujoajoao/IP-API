@@ -11,7 +11,7 @@ app.config['DEBUG'] = True
 def content(): 
     with io.open('ipapi.json', "r", encoding="utf-8") as history:
         return history.read()
-        
+
 @app.route('/result/<string:accKey>/<string:ip>/<string:continent_name>/<string:region_name>/<string:zip_code>/<string:capital>')
 def result(accKey, ip, continent_name, region_name, zip_code, capital): return '<h3>Continent Name: {};  <br> Region Name: {}; <br>  Zip Code: {}; <br> Capital Name: {}; <br> Your Access Key: {};<br>IP:{} </h3>'.format(continent_name, region_name, zip_code, capital, accKey, ip)
 
