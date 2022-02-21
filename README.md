@@ -39,8 +39,6 @@ $ python3 ip-api.py
 
 Step 3: Executando API e realizando consulta de IP
 - Acessar browser <br />
-Access Key: 4b441b7d00ae432f6864810c14136db6 <br />
-IP: 8.8.8.8
 ![](images/search.png)
 
 Step 5: Consultando histórico de pesquisas <br />
